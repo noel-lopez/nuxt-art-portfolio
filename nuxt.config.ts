@@ -4,19 +4,15 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxtjs/color-mode',
   ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   colorMode: {
     classSuffix: '',
     preference: 'light',
   },
   css: ['@unocss/reset/tailwind.css'],
-  nitro: {
-    esbuild: {
-      options: {
-        target: 'esnext',
-      },
-    },
-  },
-  extends: 'nuxt-seo-kit',
+  extends: ['nuxt-seo-kit', 'nuxt-lego'],
   runtimeConfig: {
     lastfmKey: '',
     public: {

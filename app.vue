@@ -1,16 +1,11 @@
-<script setup lang="ts">
-const nuxtApp = useNuxtApp()
-const loading = ref(false)
-nuxtApp.hook('page:start', () => {
-  loading.value = true
-})
-nuxtApp.hook('page:finish', () => {
-  loading.value = false
-})
-</script>
-
 <template>
   <div>
-    <NuxtWelcome />
+    <NuxtLayout>
+      <SeoKit />
+      <OgImageStatic component="PageOgImage" />
+      <NavigationHeader />
+      <NuxtPage />
+      <NavigationFooter />
+    </NuxtLayout>
   </div>
 </template>
