@@ -16,6 +16,7 @@
     "@unocss/nuxt": "^0.55.3",
     "eslint": "^8.48.0",
     "nuxt": "^3.7.0",
+    "nuxt-lego": "^0.0.14",
     "nuxt-seo-kit": "^1.3.9"
   }
 }
